@@ -136,8 +136,9 @@ public class MainActivity extends IActivity {
             }
         }
 
-        if (_Coordinates != null && _Coordinates.size() > 0){
+        if (application != null && application.ReceivedData != null && !application.ReceivedData.isEmpty()){
             if (mainHandler != null) {
+                received = application.ReceivedData;
                 mainHandler.postDelayed(uiRunnable, 100);
             }
         }
