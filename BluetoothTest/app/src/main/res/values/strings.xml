@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BluetoothTest</string>
+    <string name="not_connected">Not connected</string>
+    <string name="insecure_connect">Insecure connect</string>
+    <string name="discoverable">Discoverable</string>
+    <string name="secure_connect">Connect</string>
+    <string name="title_paired_devices">Paired devices</string>
+    <string name="none_paired">No devices paired</string>
+    <string name="title_other_devices">Other devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="scanning">Scanning...</string>
+    <string name="select_device">Select device</string>
+    <string name="none_found">No devices found</string>
+    <string name="request_data">Request data</string>
+    <string name="title_connected_to">Connected to</string>
+    <string name="title_connecting">Connecting...</string>
+    <string name="title_not_connected">Not connected</string>
+    <string name="status">Status</string>
+    <string name="bt_not_enabled_leaving">Bluetooth not enabled!</string>
+    <string name="receiving_data">Receinving data...</string>
+
+</resources>

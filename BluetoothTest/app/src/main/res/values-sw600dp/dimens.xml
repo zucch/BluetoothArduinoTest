@@ -1,0 +1,162 @@
+<!--
+    Copyright 2016 Angelo Zucchini
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    Base information for layout dynamic resizing
+-->
+<resources>
+    <!-- GENERIC TEXT -->
+    <dimen name="font_10">20sp</dimen>
+    <dimen name="font_12">24sp</dimen>
+    <dimen name="font_14">28sp</dimen>
+    <dimen name="font_16">32sp</dimen>
+    <dimen name="font_18">36sp</dimen>
+    <dimen name="font_20">40sp</dimen>
+    <dimen name="font_22">44sp</dimen>
+    <dimen name="font_24">48sp</dimen>
+    <dimen name="font_28">56sp</dimen>
+    <dimen name="font_30">60sp</dimen>
+    <dimen name="font_32">64sp</dimen>
+    <dimen name="font_36">72sp</dimen>
+    <dimen name="font_40">80sp</dimen>
+    <dimen name="font_48">96sp</dimen>
+    <dimen name="font_56">112sp</dimen>
+    <dimen name="font_64">128sp</dimen>
+
+    <!-- GENERIC SIZE -->
+    <dimen name="size_1">2dp</dimen>
+    <dimen name="size_2">4dp</dimen>
+    <dimen name="size_3">6dp</dimen>
+    <dimen name="size_4">8dp</dimen>
+    <dimen name="size_5">10dp</dimen>
+    <dimen name="size_6">12dp</dimen>
+    <dimen name="size_8">16dp</dimen>
+    <dimen name="size_10">20dp</dimen>
+    <dimen name="size_12">24dp</dimen>
+    <dimen name="size_15">30dp</dimen>
+    <dimen name="size_16">32dp</dimen>
+    <dimen name="size_20">40dp</dimen>
+    <dimen name="size_24">48dp</dimen>
+    <dimen name="size_25">50dp</dimen>
+    <dimen name="size_30">60dp</dimen>
+    <dimen name="size_32">64dp</dimen>
+    <dimen name="size_35">70dp</dimen>
+    <dimen name="size_36">72dp</dimen>
+    <dimen name="size_40">80dp</dimen>
+    <dimen name="size_42">84dp</dimen>
+    <dimen name="size_45">90dp</dimen>
+    <dimen name="size_46">92dp</dimen>
+    <dimen name="size_48">96dp</dimen>
+    <dimen name="size_50">100dp</dimen>
+    <dimen name="size_56">112dp</dimen>
+    <dimen name="size_60">120dp</dimen>
+    <dimen name="size_64">128dp</dimen>
+    <dimen name="size_70">140dp</dimen>
+    <dimen name="size_72">144dp</dimen>
+    <dimen name="size_75">150dp</dimen>
+    <dimen name="size_80">160dp</dimen>
+    <dimen name="size_90">180dp</dimen>
+    <dimen name="size_100">200dp</dimen>
+    <dimen name="size_120">240dp</dimen>
+    <dimen name="size_150">300dp</dimen>
+    <dimen name="size_160">320dp</dimen>
+    <dimen name="size_200">400dp</dimen>
+    <dimen name="size_220">440dp</dimen>
+    <dimen name="size_240">480dp</dimen>
+    <dimen name="size_250">500dp</dimen>
+    <dimen name="size_280">560dp</dimen>
+    <dimen name="size_300">600dp</dimen>
+    <dimen name="size_320">640dp</dimen>
+    <dimen name="size_350">700dp</dimen>
+    <dimen name="size_360">720dp</dimen>
+    <dimen name="size_400">800dp</dimen>
+    <dimen name="size_420">840dp</dimen>
+    <dimen name="size_450">900dp</dimen>
+    <dimen name="size_460">920dp</dimen>
+    <dimen name="size_480">960dp</dimen>
+    <dimen name="size_500">1000dp</dimen>
+    <dimen name="size_560">1200dp</dimen>
+    <dimen name="size_600">1200dp</dimen>
+    <dimen name="size_640">1280dp</dimen>
+    <dimen name="size_700">1400dp</dimen>
+    <dimen name="size_720">1440dp</dimen>
+    <dimen name="size_750">1500dp</dimen>
+    <dimen name="size_800">1600dp</dimen>
+    <dimen name="size_900">1800dp</dimen>
+    <dimen name="size_1000">2000dp</dimen>
+
+    <!-- GENERIC SPACING -->
+    <dimen name="spacing_1">2dp</dimen>
+    <dimen name="spacing_2">4dp</dimen>
+    <dimen name="spacing_3">6dp</dimen>
+    <dimen name="spacing_4">8dp</dimen>
+    <dimen name="spacing_5">10dp</dimen>
+    <dimen name="spacing_6">12dp</dimen>
+    <dimen name="spacing_8">16dp</dimen>
+    <dimen name="spacing_10">20dp</dimen>
+    <dimen name="spacing_12">24dp</dimen>
+    <dimen name="spacing_15">30dp</dimen>
+    <dimen name="spacing_16">32dp</dimen>
+    <dimen name="spacing_20">40dp</dimen>
+    <dimen name="spacing_24">48dp</dimen>
+    <dimen name="spacing_25">50dp</dimen>
+    <dimen name="spacing_30">60dp</dimen>
+    <dimen name="spacing_32">64dp</dimen>
+    <dimen name="spacing_35">70dp</dimen>
+    <dimen name="spacing_36">72dp</dimen>
+    <dimen name="spacing_40">80dp</dimen>
+    <dimen name="spacing_42">84dp</dimen>
+    <dimen name="spacing_45">90dp</dimen>
+    <dimen name="spacing_46">92dp</dimen>
+    <dimen name="spacing_48">96dp</dimen>
+    <dimen name="spacing_50">100dp</dimen>
+    <dimen name="spacing_56">112dp</dimen>
+    <dimen name="spacing_60">120dp</dimen>
+    <dimen name="spacing_64">128dp</dimen>
+    <dimen name="spacing_70">140dp</dimen>
+    <dimen name="spacing_72">144dp</dimen>
+    <dimen name="spacing_75">150dp</dimen>
+    <dimen name="spacing_80">160dp</dimen>
+    <dimen name="spacing_90">180dp</dimen>
+    <dimen name="spacing_100">200dp</dimen>
+    <dimen name="spacing_120">240dp</dimen>
+    <dimen name="spacing_150">300dp</dimen>
+    <dimen name="spacing_160">320dp</dimen>
+    <dimen name="spacing_200">400dp</dimen>
+    <dimen name="spacing_240">480dp</dimen>
+    <dimen name="spacing_250">500dp</dimen>
+    <dimen name="spacing_300">600dp</dimen>
+    <dimen name="spacing_320">640dp</dimen>
+    <dimen name="spacing_350">700dp</dimen>
+    <dimen name="spacing_360">720dp</dimen>
+    <dimen name="spacing_400">800dp</dimen>
+    <dimen name="spacing_420">840dp</dimen>
+    <dimen name="spacing_450">900dp</dimen>
+    <dimen name="spacing_460">960dp</dimen>
+    <dimen name="spacing_500">1000dp</dimen>
+    <dimen name="spacing_560">1120dp</dimen>
+    <dimen name="spacing_600">1200dp</dimen>
+    <dimen name="spacing_640">1280dp</dimen>
+    <dimen name="spacing_700">1400dp</dimen>
+    <dimen name="spacing_720">1440dp</dimen>
+    <dimen name="spacing_750">150dp</dimen>
+    <dimen name="spacing_800">1600dp</dimen>
+    <dimen name="spacing_900">1800dp</dimen>
+    <dimen name="spacing_1000">2000dp</dimen>
+
+    <!-- SPECIFIC ELEMENTS -->
+    <dimen name="dialog_width">520dp</dimen>
+
+
+</resources>
