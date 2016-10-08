@@ -46,7 +46,9 @@ import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends IActivity {
@@ -73,6 +75,7 @@ public class MainActivity extends IActivity {
 
     private List<Coordinates> _Coordinates;
     private String received;
+    private int _Count = 0;
 
 
     @Override
@@ -138,6 +141,12 @@ public class MainActivity extends IActivity {
 
         if (application != null && application.ReceivedData != null && !application.ReceivedData.isEmpty()){
             if (mainHandler != null) {
+                if (_Coordinates == null){
+                    _Coordinates = new ArrayList<Coordinates>();
+                }
+                else{
+                    _Coordinates.clear();
+                }
                 received = application.ReceivedData;
                 mainHandler.postDelayed(uiRunnable, 100);
             }
@@ -257,9 +266,19 @@ public class MainActivity extends IActivity {
 
         creating = true;
 
+        received = received.substring(received.lastIndexOf('*')+1);
+        received = received.replaceAll("\r\n", ";");
+        received = received.replaceAll("\t", ";");
+        received = received.replaceAll("\\r\\n", ";");
+        received = received.replaceAll("\\t", ";");
+        received = received.replaceAll(" ", "");
         received = received.replaceAll("\\.\\.", ".");
         received = received.replaceAll(";;", ";");
         received = received.replaceAll("O", "");
+
+        while (received.startsWith(";")) {
+            received = received.substring(1);
+        }
 
         if (application.ReceivedData == null || !application.ReceivedData.equals(received)) {
             // nuove informazioni ricevute da arduino, salvo in una variabile globale
@@ -348,9 +367,25 @@ public class MainActivity extends IActivity {
         if (_Coordinates == null){
             _Coordinates = new ArrayList<Coordinates>();
         }
+
+        // resetto le i dati del ciclo precedente
         received = "";
         _Coordinates.clear();
-        sendMessage("A");
+        _Count = 0;
+
+        // invio della A per avvio
+        String message = "A";
+        sendMessage(message);
+
+        // IDEA:
+        // invio della data attuale
+        //SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        //String message = String.format("D%sA", sdf.format(new Date()));
+        /*
+        * D: avvio del ciclo di lettura della data
+        * 19 caratteri di data
+        * A: avvio del ciclo di misurazione
+        * */
     }
 
     /**
@@ -418,6 +453,7 @@ public class MainActivity extends IActivity {
                     // TODO        show sent data
                     break;
                 case Constants.MESSAGE_READ:
+                    _Count++;
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
@@ -425,7 +461,7 @@ public class MainActivity extends IActivity {
                     // TODO        received data
                     if (readMessage != null) {
                         if (tvResponse != null) {
-                            tvResponse.setText(readMessage);
+                            tvResponse.setText(String.valueOf(_Count));
                         }
 
                         received += readMessage;

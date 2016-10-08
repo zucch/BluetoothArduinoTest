@@ -17,6 +17,7 @@
     <string name="title_not_connected">Not connected</string>
     <string name="status">Status</string>
     <string name="bt_not_enabled_leaving">Bluetooth not enabled!</string>
-    <string name="receiving_data">Receinving data...</string>
+    <string name="receiving_data">Receiving data...</string>
+    <string name="label_comm_cicle">Communication cicle:</string>
 
 </resources>
